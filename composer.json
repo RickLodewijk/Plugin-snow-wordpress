@@ -1,0 +1,14 @@
+{
+  "name": "rick/rick-winter-snow",
+  "description": "WordPress plugin voor een interactief Snow Falling JS effect en een donkere winterse nacht layout per pagina of globaal.",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Rick"
+    }
+  ],
+  "require": {
+    "php": ">=7.4"
+  }
+}
