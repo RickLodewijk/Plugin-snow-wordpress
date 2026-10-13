@@ -1,26 +1,50 @@
 /**
- * Donker Winter Thema (Winter Layout)
+ * Rick Winter Snow & Thema Stylesheet
  * 
- * Wordt automatisch geactiveerd wanneer het sneeuweffect aan staat.
- * Geeft de gehele website een sfeervolle, donkere winterse nacht-setting
- * (geïnspireerd op de donkere CodePen achtergrond https://codepen.io/massiebn/pen/OJMbXz).
+ * Bevat 3 complete winterse thema's:
+ * 1. Donkere Winternacht (.theme-winter-dark / .winter-theme)
+ * 2. Frosted Winterdag (.theme-winter-frost)
+ * 3. Noorderlicht / Aurora (.theme-winter-aurora)
+ * 
+ * Plus de authentieke CodePen witte sneeuwvlokken (.rick-snowflake).
  */
 
-/* 1. Algemene Achtergrond & Typografie */
+/* ==========================================================================
+   1. GEDEELDE TRANSITIES & BASIS STIJLEN
+   ========================================================================== */
 body.winter-theme {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.rick-snowflake {
+    color: #ffffff !important;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.9), 0 0 14px rgba(186, 230, 253, 0.6) !important;
+    user-select: none !important;
+    pointer-events: none !important;
+    line-height: 1 !important;
+    display: inline-block !important;
+}
+
+/* ==========================================================================
+   2. THEMA 1: DONKERE WINTERNACHT (Dark Midnight Theme - Standaard)
+   ========================================================================== */
+body.winter-theme,
+body.theme-winter-dark {
     background-color: #080d1a !important;
     background-image: radial-gradient(circle at 50% 0%, #152238 0%, #080d1a 65%, #050811 100%) !important;
     background-attachment: fixed !important;
     color: #e2e8f0 !important;
 }
 
-body.winter-theme ::selection {
+body.winter-theme ::selection,
+body.theme-winter-dark ::selection {
     background: #0284c7;
     color: #ffffff;
 }
 
-/* 2. Zwevende Capsule Header */
-body.winter-theme .site-header__pill {
+/* Header */
+body.winter-theme .site-header__pill,
+body.theme-winter-dark .site-header__pill {
     background: rgba(13, 21, 38, 0.88) !important;
     backdrop-filter: blur(20px) !important;
     -webkit-backdrop-filter: blur(20px) !important;
@@ -28,27 +52,33 @@ body.winter-theme .site-header__pill {
     box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.7), 0 0 20px rgba(56, 189, 248, 0.12) !important;
 }
 
-body.winter-theme .site-brand {
+body.winter-theme .site-brand,
+body.theme-winter-dark .site-brand {
     color: #ffffff !important;
 }
 
-body.winter-theme .site-nav a {
+body.winter-theme .site-nav a,
+body.theme-winter-dark .site-nav a {
     color: #cbd5e1 !important;
 }
 
 body.winter-theme .site-nav a:hover,
-body.winter-theme .site-nav .current-menu-item a {
+body.winter-theme .site-nav .current-menu-item a,
+body.theme-winter-dark .site-nav a:hover,
+body.theme-winter-dark .site-nav .current-menu-item a {
     color: #38bdf8 !important;
 }
 
-body.winter-theme .header-cta-btn {
+body.winter-theme .header-cta-btn,
+body.theme-winter-dark .header-cta-btn {
     background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
     color: #ffffff !important;
     box-shadow: 0 4px 12px rgba(2, 132, 199, 0.4) !important;
 }
 
-/* 3. Hero & Zoekfilters (Homepage & Overzichten) */
-body.winter-theme .home-hero {
+/* Hero & Zoekfilters */
+body.winter-theme .home-hero,
+body.theme-winter-dark .home-hero {
     background: linear-gradient(180deg, rgba(15, 23, 42, 0.7) 0%, rgba(13, 21, 38, 0.95) 100%) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
@@ -56,20 +86,30 @@ body.winter-theme .home-hero {
 body.winter-theme .home-hero h2,
 body.winter-theme .section-overview-pepernoot .intro h1,
 body.winter-theme .section-overview-oliebol .intro h1,
-body.winter-theme .intro h1 {
+body.winter-theme .intro h1,
+body.theme-winter-dark .home-hero h2,
+body.theme-winter-dark .section-overview-pepernoot .intro h1,
+body.theme-winter-dark .section-overview-oliebol .intro h1,
+body.theme-winter-dark .intro h1 {
     color: #ffffff !important;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
 }
 
 body.winter-theme .intro-sub,
-body.winter-theme .home-hero p {
+body.winter-theme .home-hero p,
+body.theme-winter-dark .intro-sub,
+body.theme-winter-dark .home-hero p {
     color: #94a3b8 !important;
 }
 
 body.winter-theme .filter-group input,
 body.winter-theme .filter-group select,
 body.winter-theme .search-form-pepernoot input,
-body.winter-theme .search-form-oliebol input {
+body.winter-theme .search-form-oliebol input,
+body.theme-winter-dark .filter-group input,
+body.theme-winter-dark .filter-group select,
+body.theme-winter-dark .search-form-pepernoot input,
+body.theme-winter-dark .search-form-oliebol input {
     background-color: #121c2e !important;
     border-color: #273954 !important;
     color: #ffffff !important;
@@ -78,43 +118,58 @@ body.winter-theme .search-form-oliebol input {
 body.winter-theme .filter-group input:focus,
 body.winter-theme .filter-group select:focus,
 body.winter-theme .search-form-pepernoot input:focus,
-body.winter-theme .search-form-oliebol input:focus {
+body.winter-theme .search-form-oliebol input:focus,
+body.theme-winter-dark .filter-group input:focus,
+body.theme-winter-dark .filter-group select:focus,
+body.theme-winter-dark .search-form-pepernoot input:focus,
+body.theme-winter-dark .search-form-oliebol input:focus {
     border-color: #38bdf8 !important;
     box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25) !important;
 }
 
-/* 4. Sorteerknoppen */
-body.winter-theme .sort-btn {
+/* Sorteerknoppen */
+body.winter-theme .sort-btn,
+body.theme-winter-dark .sort-btn {
     background: #131f33 !important;
     border: 1px solid #23334d !important;
     color: #cbd5e1 !important;
 }
 
-body.winter-theme .sort-btn:hover {
+body.winter-theme .sort-btn:hover,
+body.theme-winter-dark .sort-btn:hover {
     background: #1c2b45 !important;
     color: #ffffff !important;
     border-color: #38bdf8 !important;
 }
 
-body.winter-theme .sort-btn.active {
+body.winter-theme .sort-btn.active,
+body.theme-winter-dark .sort-btn.active {
     background: #0284c7 !important;
     border-color: #38bdf8 !important;
     color: #ffffff !important;
     box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35) !important;
 }
 
-/* 5. Kaarten (Recepten, Pepernoten, Oliebollen) */
+/* Kaarten */
 body.winter-theme .recipe-grid-section,
 body.winter-theme .section-overview-pepernoot,
 body.winter-theme .section-overview-oliebol,
-body.winter-theme .section-overview {
+body.winter-theme .section-overview,
+body.theme-winter-dark .recipe-grid-section,
+body.theme-winter-dark .section-overview-pepernoot,
+body.theme-winter-dark .section-overview-oliebol,
+body.theme-winter-dark .section-overview {
     background: transparent !important;
 }
 
 body.winter-theme .recipe-card,
 body.winter-theme .section-overview-pepernoot .card,
 body.winter-theme .section-overview-oliebol .card,
-body.winter-theme .card {
+body.winter-theme .card,
+body.theme-winter-dark .recipe-card,
+body.theme-winter-dark .section-overview-pepernoot .card,
+body.theme-winter-dark .section-overview-oliebol .card,
+body.theme-winter-dark .card {
     background: #121b2d !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     color: #e2e8f0 !important;
@@ -123,29 +178,39 @@ body.winter-theme .card {
 
 body.winter-theme .recipe-card:hover,
 body.winter-theme .section-overview-pepernoot .card:hover,
-body.winter-theme .section-overview-oliebol .card:hover {
+body.winter-theme .section-overview-oliebol .card:hover,
+body.theme-winter-dark .recipe-card:hover,
+body.theme-winter-dark .section-overview-pepernoot .card:hover,
+body.theme-winter-dark .section-overview-oliebol .card:hover {
     border-color: rgba(56, 189, 248, 0.4) !important;
     box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.8), 0 0 15px rgba(56, 189, 248, 0.15) !important;
 }
 
 body.winter-theme .recipe-card h3,
 body.winter-theme .card h3,
-body.winter-theme .card h3 a {
+body.winter-theme .card h3 a,
+body.theme-winter-dark .recipe-card h3,
+body.theme-winter-dark .card h3,
+body.theme-winter-dark .card h3 a {
     color: #ffffff !important;
 }
 
 body.winter-theme .card-description,
-body.winter-theme .recipe-card p {
+body.winter-theme .recipe-card p,
+body.theme-winter-dark .card-description,
+body.theme-winter-dark .recipe-card p {
     color: #94a3b8 !important;
 }
 
-body.winter-theme .card-endbar {
+body.winter-theme .card-endbar,
+body.theme-winter-dark .card-endbar {
     border-top-color: rgba(255, 255, 255, 0.08) !important;
     color: #64748b !important;
 }
 
-/* 6. Detailpagina's (.recipe-container) */
-body.winter-theme .recipe-container {
+/* Detailpagina's (.recipe-container) */
+body.winter-theme .recipe-container,
+body.theme-winter-dark .recipe-container {
     background: #111a2b !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     color: #e2e8f0 !important;
@@ -155,43 +220,62 @@ body.winter-theme .recipe-container {
 body.winter-theme .recipe-container h1,
 body.winter-theme .recipe-container h2,
 body.winter-theme .recipe-container h3,
-body.winter-theme .recipe-container h4 {
+body.winter-theme .recipe-container h4,
+body.theme-winter-dark .recipe-container h1,
+body.theme-winter-dark .recipe-container h2,
+body.theme-winter-dark .recipe-container h3,
+body.theme-winter-dark .recipe-container h4 {
     color: #ffffff !important;
 }
 
 body.winter-theme .recipe-container p,
-body.winter-theme .recipe-container li {
+body.winter-theme .recipe-container li,
+body.theme-winter-dark .recipe-container p,
+body.theme-winter-dark .recipe-container li {
     color: #cbd5e1 !important;
 }
 
-body.winter-theme .recipe-container .header .content p.meta-info {
+body.winter-theme .recipe-container .header .content p.meta-info,
+body.theme-winter-dark .recipe-container .header .content p.meta-info {
     color: #94a3b8 !important;
 }
 
 body.winter-theme .recipe-ingredients-table,
 body.winter-theme .ingredients-container,
-body.winter-theme .recipe-method-box {
+body.winter-theme .recipe-method-box,
+body.theme-winter-dark .recipe-ingredients-table,
+body.theme-winter-dark .ingredients-container,
+body.theme-winter-dark .recipe-method-box {
     background: #0d1524 !important;
     border-color: rgba(255, 255, 255, 0.08) !important;
 }
 
-body.winter-theme .recipe-print-actions__button {
+body.winter-theme .recipe-print-actions__button,
+body.theme-winter-dark .recipe-print-actions__button {
     background: #0284c7 !important;
     color: #ffffff !important;
 }
 
-/* 7. Gutenberg Formulieren & Review Blokken */
+/* Formulieren & Review Blokken */
 body.winter-theme .rick-pepernoot-form-section,
 body.winter-theme .rick-oliebol-form-section,
 body.winter-theme .rick-pepernoot-review-section,
-body.winter-theme .rick-oliebol-review-section {
+body.winter-theme .rick-oliebol-review-section,
+body.theme-winter-dark .rick-pepernoot-form-section,
+body.theme-winter-dark .rick-oliebol-form-section,
+body.theme-winter-dark .rick-pepernoot-review-section,
+body.theme-winter-dark .rick-oliebol-review-section {
     background: transparent !important;
 }
 
 body.winter-theme .rick-pepernoot-card,
 body.winter-theme .rick-oliebol-card,
 body.winter-theme .rick-pepernoot-review-card,
-body.winter-theme .rick-oliebol-review-card {
+body.winter-theme .rick-oliebol-review-card,
+body.theme-winter-dark .rick-pepernoot-card,
+body.theme-winter-dark .rick-oliebol-card,
+body.theme-winter-dark .rick-pepernoot-review-card,
+body.theme-winter-dark .rick-oliebol-review-card {
     background: #111a2b !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     color: #e2e8f0 !important;
@@ -199,22 +283,30 @@ body.winter-theme .rick-oliebol-review-card {
 }
 
 body.winter-theme .rick-pepernoot-title,
-body.winter-theme .rick-oliebol-title {
+body.winter-theme .rick-oliebol-title,
+body.theme-winter-dark .rick-pepernoot-title,
+body.theme-winter-dark .rick-oliebol-title {
     color: #ffffff !important;
 }
 
 body.winter-theme .rick-pepernoot-subtitle,
-body.winter-theme .rick-oliebol-subtitle {
+body.winter-theme .rick-oliebol-subtitle,
+body.theme-winter-dark .rick-pepernoot-subtitle,
+body.theme-winter-dark .rick-oliebol-subtitle {
     color: #94a3b8 !important;
 }
 
-body.winter-theme .rick-form-group label {
+body.winter-theme .rick-form-group label,
+body.theme-winter-dark .rick-form-group label {
     color: #e2e8f0 !important;
 }
 
 body.winter-theme .rick-form-group input,
 body.winter-theme .rick-form-group select,
-body.winter-theme .rick-form-group textarea {
+body.winter-theme .rick-form-group textarea,
+body.theme-winter-dark .rick-form-group input,
+body.theme-winter-dark .rick-form-group select,
+body.theme-winter-dark .rick-form-group textarea {
     background: #0c1422 !important;
     border-color: #23334d !important;
     color: #ffffff !important;
@@ -222,29 +314,203 @@ body.winter-theme .rick-form-group textarea {
 
 body.winter-theme .rick-form-group input:focus,
 body.winter-theme .rick-form-group select:focus,
-body.winter-theme .rick-form-group textarea:focus {
+body.winter-theme .rick-form-group textarea:focus,
+body.theme-winter-dark .rick-form-group input:focus,
+body.theme-winter-dark .rick-form-group select:focus,
+body.theme-winter-dark .rick-form-group textarea:focus {
     border-color: #38bdf8 !important;
     box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25) !important;
 }
 
-body.winter-theme .rick-form-heading {
+body.winter-theme .rick-form-heading,
+body.theme-winter-dark .rick-form-heading {
     color: #38bdf8 !important;
     border-bottom-color: rgba(255, 255, 255, 0.08) !important;
 }
 
 body.winter-theme .rick-pepernoot-submit-btn,
-body.winter-theme .rick-oliebol-submit-btn {
+body.winter-theme .rick-oliebol-submit-btn,
+body.theme-winter-dark .rick-pepernoot-submit-btn,
+body.theme-winter-dark .rick-oliebol-submit-btn {
     background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
     color: #ffffff !important;
     box-shadow: 0 6px 20px rgba(2, 132, 199, 0.45) !important;
 }
 
-/* 8. Authentieke CodePen Witte Sneeuwvlokken */
-.rick-snowflake {
+/* ==========================================================================
+   3. THEMA 2: FROSTED WINTERDAG (.theme-winter-frost)
+   ========================================================================== */
+body.theme-winter-frost {
+    background-color: #edf5fa !important;
+    background-image: radial-gradient(circle at 50% 0%, #dbeafe 0%, #edf5fa 60%, #e2e8f0 100%) !important;
+    background-attachment: fixed !important;
+    color: #1e293b !important;
+}
+
+body.theme-winter-frost .site-header__pill {
+    background: rgba(255, 255, 255, 0.92) !important;
+    border: 1px solid rgba(186, 230, 253, 0.7) !important;
+    box-shadow: 0 10px 30px -5px rgba(2, 132, 199, 0.15) !important;
+}
+
+body.theme-winter-frost .site-brand {
+    color: #0f172a !important;
+}
+
+body.theme-winter-frost .site-nav a {
+    color: #334155 !important;
+}
+
+body.theme-winter-frost .site-nav a:hover,
+body.theme-winter-frost .site-nav .current-menu-item a {
+    color: #0284c7 !important;
+}
+
+body.theme-winter-frost .home-hero {
+    background: linear-gradient(180deg, rgba(224, 242, 254, 0.8) 0%, rgba(240, 249, 255, 0.95) 100%) !important;
+    border-bottom: 1px solid #bae6fd !important;
+}
+
+body.theme-winter-frost .home-hero h2,
+body.theme-winter-frost .intro h1 {
+    color: #0f172a !important;
+    text-shadow: none !important;
+}
+
+body.theme-winter-frost .home-hero p,
+body.theme-winter-frost .intro-sub {
+    color: #475569 !important;
+}
+
+body.theme-winter-frost .recipe-card,
+body.theme-winter-frost .section-overview-pepernoot .card,
+body.theme-winter-frost .section-overview-oliebol .card,
+body.theme-winter-frost .card {
+    background: #ffffff !important;
+    border: 1px solid #bae6fd !important;
+    color: #1e293b !important;
+    box-shadow: 0 10px 25px -5px rgba(186, 230, 253, 0.4) !important;
+}
+
+body.theme-winter-frost .recipe-card h3,
+body.theme-winter-frost .card h3,
+body.theme-winter-frost .card h3 a {
+    color: #0f172a !important;
+}
+
+body.theme-winter-frost .recipe-card p,
+body.theme-winter-frost .card-description {
+    color: #64748b !important;
+}
+
+body.theme-winter-frost .recipe-container {
+    background: #ffffff !important;
+    border: 1px solid #bae6fd !important;
+    color: #1e293b !important;
+    box-shadow: 0 20px 45px -10px rgba(186, 230, 253, 0.45) !important;
+}
+
+body.theme-winter-frost .recipe-container h1,
+body.theme-winter-frost .recipe-container h2,
+body.theme-winter-frost .recipe-container h3 {
+    color: #0f172a !important;
+}
+
+body.theme-winter-frost .recipe-container p,
+body.theme-winter-frost .recipe-container li {
+    color: #334155 !important;
+}
+
+body.theme-winter-frost .recipe-ingredients-table,
+body.theme-winter-frost .ingredients-container,
+body.theme-winter-frost .recipe-method-box {
+    background: #f8fafc !important;
+    border-color: #e2e8f0 !important;
+}
+
+body.theme-winter-frost .filter-group input,
+body.theme-winter-frost .filter-group select,
+body.theme-winter-frost .rick-form-group input,
+body.theme-winter-frost .rick-form-group select,
+body.theme-winter-frost .rick-form-group textarea {
+    background-color: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    color: #0f172a !important;
+}
+
+body.theme-winter-frost .rick-pepernoot-card,
+body.theme-winter-frost .rick-oliebol-card {
+    background: #ffffff !important;
+    border-color: #bae6fd !important;
+    color: #1e293b !important;
+}
+
+body.theme-winter-frost .rick-pepernoot-title,
+body.theme-winter-frost .rick-oliebol-title {
+    color: #0f172a !important;
+}
+
+/* ==========================================================================
+   4. THEMA 3: NOORDERLICHT / AURORA (.theme-winter-aurora)
+   ========================================================================== */
+body.theme-winter-aurora {
+    background-color: #061118 !important;
+    background-image: 
+        radial-gradient(ellipse at 25% 15%, rgba(16, 185, 129, 0.22) 0%, transparent 55%),
+        radial-gradient(ellipse at 75% 20%, rgba(168, 85, 247, 0.22) 0%, transparent 55%),
+        radial-gradient(circle at 50% 0%, #0d2830 0%, #061118 70%) !important;
+    background-attachment: fixed !important;
+    color: #e2e8f0 !important;
+}
+
+body.theme-winter-aurora .site-header__pill {
+    background: rgba(6, 22, 28, 0.92) !important;
+    border: 1px solid rgba(52, 211, 153, 0.25) !important;
+    box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.8), 0 0 20px rgba(52, 211, 153, 0.2) !important;
+}
+
+body.theme-winter-aurora .site-brand {
     color: #ffffff !important;
-    text-shadow: 0 0 6px rgba(255, 255, 255, 0.85), 0 0 12px rgba(186, 230, 253, 0.5) !important;
-    user-select: none !important;
-    pointer-events: none !important;
-    line-height: 1 !important;
-    display: inline-block !important;
+}
+
+body.theme-winter-aurora .site-nav a:hover,
+body.theme-winter-aurora .site-nav .current-menu-item a {
+    color: #34d399 !important;
+}
+
+body.theme-winter-aurora .recipe-card,
+body.theme-winter-aurora .section-overview-pepernoot .card,
+body.theme-winter-aurora .section-overview-oliebol .card,
+body.theme-winter-aurora .card {
+    background: #091e24 !important;
+    border: 1px solid rgba(52, 211, 153, 0.2) !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.7), 0 0 15px rgba(168, 85, 247, 0.12) !important;
+}
+
+body.theme-winter-aurora .recipe-card:hover,
+body.theme-winter-aurora .section-overview-pepernoot .card:hover,
+body.theme-winter-aurora .section-overview-oliebol .card:hover {
+    border-color: rgba(52, 211, 153, 0.45) !important;
+    box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.8), 0 0 20px rgba(52, 211, 153, 0.25) !important;
+}
+
+body.theme-winter-aurora .recipe-container {
+    background: #091e24 !important;
+    border: 1px solid rgba(52, 211, 153, 0.2) !important;
+    box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(52, 211, 153, 0.15) !important;
+}
+
+body.theme-winter-aurora .header-cta-btn,
+body.theme-winter-aurora .rick-pepernoot-submit-btn,
+body.theme-winter-aurora .rick-oliebol-submit-btn,
+body.theme-winter-aurora .recipe-print-actions__button {
+    background: linear-gradient(135deg, #059669 0%, #7c3aed 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35) !important;
+}
+
+body.theme-winter-aurora .rick-pepernoot-card,
+body.theme-winter-aurora .rick-oliebol-card {
+    background: #091e24 !important;
+    border: 1px solid rgba(52, 211, 153, 0.2) !important;
 }

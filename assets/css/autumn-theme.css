@@ -1,0 +1,278 @@
+/**
+ * Rick Autumn Leaves & Themes Stylesheet
+ * 
+ * Bevat 3 sfeervolle herfstthema's:
+ * 1. Gouden Herfst / Warm Amber (.theme-autumn-gold)
+ * 2. Donker Herfstbos & Koper (.theme-autumn-dark)
+ * 3. Pompoen & Kaneel (.theme-autumn-pumpkin)
+ */
+
+/* ==========================================================================
+   1. GEDEELDE TRANSITIES VOOR HERFST
+   ========================================================================== */
+body.autumn-theme {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+#rick-autumn-leaves-container {
+    pointer-events: none !important;
+}
+
+.rick-autumn-leaf {
+    pointer-events: none !important;
+    user-select: none !important;
+}
+
+/* ==========================================================================
+   2. THEMA 1: GOUDEN HERFST / WARM AMBER (.theme-autumn-gold)
+   ========================================================================== */
+body.theme-autumn-gold {
+    background-color: #1a1008 !important;
+    background-image: radial-gradient(circle at 50% 0%, #341c0e 0%, #1c1007 65%, #0f0803 100%) !important;
+    background-attachment: fixed !important;
+    color: #fef3c7 !important;
+}
+
+body.theme-autumn-gold ::selection {
+    background: #d97706;
+    color: #ffffff;
+}
+
+body.theme-autumn-gold .site-header__pill {
+    background: rgba(36, 21, 10, 0.88) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(245, 158, 11, 0.25) !important;
+    box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.7), 0 0 20px rgba(245, 158, 11, 0.15) !important;
+}
+
+body.theme-autumn-gold .site-brand {
+    color: #fef3c7 !important;
+}
+
+body.theme-autumn-gold .site-nav a {
+    color: #fed7aa !important;
+}
+
+body.theme-autumn-gold .site-nav a:hover,
+body.theme-autumn-gold .site-nav .current-menu-item a {
+    color: #fbbf24 !important;
+}
+
+body.theme-autumn-gold .header-cta-btn,
+body.theme-autumn-gold .recipe-print-actions__button,
+body.theme-autumn-gold .rick-pepernoot-submit-btn,
+body.theme-autumn-gold .rick-oliebol-submit-btn {
+    background: linear-gradient(135deg, #d97706 0%, #b45309 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(217, 119, 6, 0.4) !important;
+}
+
+body.theme-autumn-gold .home-hero {
+    background: linear-gradient(180deg, rgba(46, 26, 12, 0.7) 0%, rgba(28, 16, 7, 0.95) 100%) !important;
+    border-bottom: 1px solid rgba(245, 158, 11, 0.15) !important;
+}
+
+body.theme-autumn-gold .home-hero h2,
+body.theme-autumn-gold .intro h1 {
+    color: #ffffff !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6) !important;
+}
+
+body.theme-autumn-gold .intro-sub,
+body.theme-autumn-gold .home-hero p {
+    color: #fde68a !important;
+}
+
+body.theme-autumn-gold .recipe-card,
+body.theme-autumn-gold .section-overview-pepernoot .card,
+body.theme-autumn-gold .section-overview-oliebol .card,
+body.theme-autumn-gold .card {
+    background: #24160c !important;
+    border: 1px solid rgba(245, 158, 11, 0.2) !important;
+    color: #fef3c7 !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6) !important;
+}
+
+body.theme-autumn-gold .recipe-card:hover,
+body.theme-autumn-gold .section-overview-pepernoot .card:hover,
+body.theme-autumn-gold .section-overview-oliebol .card:hover {
+    border-color: rgba(251, 191, 36, 0.5) !important;
+    box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.8), 0 0 18px rgba(245, 158, 11, 0.2) !important;
+}
+
+body.theme-autumn-gold .recipe-card h3,
+body.theme-autumn-gold .card h3,
+body.theme-autumn-gold .card h3 a {
+    color: #ffffff !important;
+}
+
+body.theme-autumn-gold .card-description,
+body.theme-autumn-gold .recipe-card p {
+    color: #fde68a !important;
+}
+
+body.theme-autumn-gold .recipe-container {
+    background: #23150b !important;
+    border: 1px solid rgba(245, 158, 11, 0.2) !important;
+    color: #fef3c7 !important;
+    box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(245, 158, 11, 0.12) !important;
+}
+
+body.theme-autumn-gold .recipe-container h1,
+body.theme-autumn-gold .recipe-container h2,
+body.theme-autumn-gold .recipe-container h3 {
+    color: #ffffff !important;
+}
+
+body.theme-autumn-gold .recipe-container p,
+body.theme-autumn-gold .recipe-container li {
+    color: #fef3c7 !important;
+}
+
+body.theme-autumn-gold .recipe-ingredients-table,
+body.theme-autumn-gold .ingredients-container,
+body.theme-autumn-gold .recipe-method-box {
+    background: #1a0f07 !important;
+    border-color: rgba(245, 158, 11, 0.15) !important;
+}
+
+body.theme-autumn-gold .filter-group input,
+body.theme-autumn-gold .filter-group select,
+body.theme-autumn-gold .rick-form-group input,
+body.theme-autumn-gold .rick-form-group select,
+body.theme-autumn-gold .rick-form-group textarea {
+    background-color: #1a0f07 !important;
+    border-color: #452410 !important;
+    color: #ffffff !important;
+}
+
+body.theme-autumn-gold .rick-pepernoot-card,
+body.theme-autumn-gold .rick-oliebol-card {
+    background: #23150b !important;
+    border: 1px solid rgba(245, 158, 11, 0.2) !important;
+}
+
+/* ==========================================================================
+   3. THEMA 2: DONKER HERFSTBOS & KOPER (.theme-autumn-dark)
+   ========================================================================== */
+body.theme-autumn-dark {
+    background-color: #130a05 !important;
+    background-image: radial-gradient(circle at 50% 0%, #281409 0%, #150b05 60%, #0a0502 100%) !important;
+    background-attachment: fixed !important;
+    color: #e2e8f0 !important;
+}
+
+body.theme-autumn-dark .site-header__pill {
+    background: rgba(26, 14, 7, 0.9) !important;
+    border: 1px solid rgba(234, 88, 12, 0.25) !important;
+    box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.8), 0 0 18px rgba(234, 88, 12, 0.15) !important;
+}
+
+body.theme-autumn-dark .site-brand {
+    color: #ffffff !important;
+}
+
+body.theme-autumn-dark .site-nav a {
+    color: #cbd5e1 !important;
+}
+
+body.theme-autumn-dark .site-nav a:hover,
+body.theme-autumn-dark .site-nav .current-menu-item a {
+    color: #f97316 !important;
+}
+
+body.theme-autumn-dark .header-cta-btn,
+body.theme-autumn-dark .recipe-print-actions__button,
+body.theme-autumn-dark .rick-pepernoot-submit-btn,
+body.theme-autumn-dark .rick-oliebol-submit-btn {
+    background: linear-gradient(135deg, #c2410c 0%, #9a3412 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(194, 65, 12, 0.4) !important;
+}
+
+body.theme-autumn-dark .recipe-card,
+body.theme-autumn-dark .section-overview-pepernoot .card,
+body.theme-autumn-dark .section-overview-oliebol .card,
+body.theme-autumn-dark .card {
+    background: #1d0f07 !important;
+    border: 1px solid rgba(234, 88, 12, 0.18) !important;
+    color: #e2e8f0 !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.7) !important;
+}
+
+body.theme-autumn-dark .recipe-card:hover,
+body.theme-autumn-dark .section-overview-pepernoot .card:hover,
+body.theme-autumn-dark .section-overview-oliebol .card:hover {
+    border-color: rgba(249, 115, 22, 0.45) !important;
+    box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.85), 0 0 18px rgba(234, 88, 12, 0.2) !important;
+}
+
+body.theme-autumn-dark .recipe-container {
+    background: #1c0e07 !important;
+    border: 1px solid rgba(234, 88, 12, 0.2) !important;
+    color: #e2e8f0 !important;
+}
+
+body.theme-autumn-dark .recipe-ingredients-table,
+body.theme-autumn-dark .ingredients-container,
+body.theme-autumn-dark .recipe-method-box {
+    background: #140a04 !important;
+    border-color: rgba(234, 88, 12, 0.15) !important;
+}
+
+/* ==========================================================================
+   4. THEMA 3: POMPOEN & KANEEL (.theme-autumn-pumpkin)
+   ========================================================================== */
+body.theme-autumn-pumpkin {
+    background-color: #170b04 !important;
+    background-image: 
+        radial-gradient(ellipse at 30% 10%, rgba(234, 88, 12, 0.25) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(217, 119, 6, 0.2) 0%, transparent 55%),
+        radial-gradient(circle at 50% 0%, #2f1406 0%, #170b04 70%) !important;
+    background-attachment: fixed !important;
+    color: #ffedd5 !important;
+}
+
+body.theme-autumn-pumpkin .site-header__pill {
+    background: rgba(31, 14, 5, 0.92) !important;
+    border: 1px solid rgba(249, 115, 22, 0.3) !important;
+    box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.8), 0 0 20px rgba(249, 115, 22, 0.18) !important;
+}
+
+body.theme-autumn-pumpkin .site-brand {
+    color: #ffffff !important;
+}
+
+body.theme-autumn-pumpkin .site-nav a:hover,
+body.theme-autumn-pumpkin .site-nav .current-menu-item a {
+    color: #fb923c !important;
+}
+
+body.theme-autumn-pumpkin .recipe-card,
+body.theme-autumn-pumpkin .section-overview-pepernoot .card,
+body.theme-autumn-pumpkin .section-overview-oliebol .card,
+body.theme-autumn-pumpkin .card {
+    background: #231106 !important;
+    border: 1px solid rgba(249, 115, 22, 0.22) !important;
+    color: #ffedd5 !important;
+}
+
+body.theme-autumn-pumpkin .recipe-card:hover {
+    border-color: rgba(251, 146, 60, 0.5) !important;
+    box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.85), 0 0 20px rgba(249, 115, 22, 0.25) !important;
+}
+
+body.theme-autumn-pumpkin .header-cta-btn,
+body.theme-autumn-pumpkin .rick-pepernoot-submit-btn,
+body.theme-autumn-pumpkin .rick-oliebol-submit-btn {
+    background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(234, 88, 12, 0.45) !important;
+}
+
+body.theme-autumn-pumpkin .recipe-container {
+    background: #221006 !important;
+    border: 1px solid rgba(249, 115, 22, 0.22) !important;
+    color: #ffedd5 !important;
+}
